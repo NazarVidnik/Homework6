@@ -64,6 +64,7 @@ import java.util.Scanner;
                 System.out.print("Try guess other number (y/n)? ");
                 cont = getUserYes();
             }while (cont == 'y');
+            System.out.print("Thank you for game, bye  ");
 
 
 

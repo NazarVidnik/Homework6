@@ -5,7 +5,7 @@ public class Assignment6Part1 {
 
     static Scanner cin = new Scanner(System.in); //scanner initialization
 
-    public static char getUserYes(){
+    public static char getUserYes(){ //
         char a;
         do {
             a = cin.next().charAt(0);
