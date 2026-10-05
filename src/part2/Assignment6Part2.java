@@ -5,9 +5,8 @@ import java.util.Scanner;
     public class Assignment6Part2 {
         static Scanner cin = new Scanner(System.in); //scanner initialization
         public static int magicNumber(){
-            int a;
-            a = (int)(Math.random() * 20);//This command generates a double-precision number between 0.0 and 1.0
-                                                //We multiply the number by 20 and convert it to an integer.
+            int a= (int)(Math.random() * 20);//This command generates a double-precision number between 0.0 and 1.0
+                                //We multiply the number by 20 and convert it to an integer.
         return a;
         };
         public static int getUserInput(){
@@ -19,6 +18,16 @@ import java.util.Scanner;
                     System.out.println("Only between 1 and 21!!! Try again!");
                 }
             } while (a <= 0 || a>20);
+            return a;
+        };
+        public static char getUserYes(){
+            char a;
+            do {
+                a = cin.next().charAt(0);
+                if (a !=  'y' && a!= 'n') {
+                    System.out.println("Pleas enter only letter y and n !!! Try again!");
+                }
+            } while (a !=  'y' && a!= 'n');
             return a;
         };
         static void main(String[] args) {
@@ -35,7 +44,7 @@ import java.util.Scanner;
                 System.out.println("Gues nubber between 1 and 21 ");
                 while (i<5 && !win){
                     int userNumber = getUserInput();
-
+                    System.out.println(number);
                     if (number>userNumber){
                         System.out.print("too low :(( \n" +
                                 "try again!\n");
@@ -53,7 +62,7 @@ import java.util.Scanner;
                     }
                 }
                 System.out.print("Try guess other number (y/n)? ");
-                cont = cin.next().charAt(0);
+                cont = getUserYes();
             }while (cont == 'y');
 
 

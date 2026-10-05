@@ -5,6 +5,17 @@ public class Assignment6Part1 {
 
     static Scanner cin = new Scanner(System.in); //scanner initialization
 
+    public static char getUserYes(){
+        char a;
+        do {
+            a = cin.next().charAt(0);
+            if (a !=  'y' && a!= 'n') {
+                System.out.println("Pleas enter only letter y and n !!! Try again!");
+            }
+        } while (a !=  'y' && a!= 'n');
+        return a;
+    };
+
     public static int sidesInput() {
         int a;
         do {
@@ -92,7 +103,7 @@ public class Assignment6Part1 {
             } while (side1 < 0 || side2 < 0 || side3 < 0 || tooBigSide == 0);
             System.out.println(triangleInfo(side1,side2,side3));
             System.out.print("Check another Triangle (y/n)? ");
-            cont = cin.next().charAt(0);
+            cont = getUserYes();
         }while (cont == 'y');
 
     }
