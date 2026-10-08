@@ -14,7 +14,7 @@ public class Assignment6Part1 {
             } else if (a=='y') {
                 return true;
             }
-        } while (a !=  'y' && a!= 'n');
+        } while ( a!= 'n');
         return false;
     };
 

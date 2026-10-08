@@ -11,7 +11,6 @@ import java.util.Scanner;
         };
         public static int getUserInput(){
             int a;
-
             do {
                 a = cin.nextInt();
                 if (a <= 0||a>20) {
@@ -29,21 +28,20 @@ import java.util.Scanner;
                 } else if (a=='y') {
                     return true;
                 }
-            } while (a !=  'y' && a!= 'n');
+            } while ( a!= 'n');
             return false;
         };
         public static void main(String[] args) {
-            System.out.println("Welcome to the incredible, wonderful, exciting, extraordinary, interesting, and unrivaled \"Guess the Number\" game! " +
-                    "The rules are simple: I’ll pick a number between 1 and 20, " +
-                    "and you have to guess it within 5 attempts. I" +
-                    "’ll give you hints—telling you if your guess is too high or too low. Good luck!");
+            System.out.println("Welcome to the incredible, wonderful, exciting, extraordinary, interesting, and unrivaled \"Guess the Number\" game! \n" +
+                    "The rules are simple: I’ll pick a number between 1 and 20, \n" +
+                    "and you have to guess it within 5 attempts. \n I" +
+                    "’ll give you hints—telling you if your guess is too high or too low. Good luck!\n");
             char cont;
             do {
-
                 int number = magicNumber();
                 int i =0;
                 boolean win = false;
-                System.out.println("Gues nubber between 1 and 21 ");
+                System.out.println("Gues nubber between 1 and 20 ");
                 while (i<5 && !win){
                     int userNumber = getUserInput();
                     if (number>userNumber){
